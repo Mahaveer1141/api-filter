@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .filter-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      width: 100px;
+      text-align: right;
+      margin-right: 20px;
+    }
+
+    #products-list {
+      margin-left: 10rem;
+    }
+
+    .product-container {
+      padding: 1rem;
+      border: 1px solid black;
+      width: fit-content;
+      max-width: 400px;
+      margin-bottom: 1rem;
+    }
+
+    .image {
+      width: 300px;
+    }
+  </style>
+  <body>
+    <form>
+      <div class="filter-group">
+        <label for="select-category">Category:</label>
+        <select id="select-category">
+          <option value="">All</option>
+          <option value="men's clothing">men's clothing</option>
+          <option value="electronics">Electronics</option>
+          <option value="women's clothing">Women's clothing</option>
+          <option value="jewelery">Jewelery</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="select-rating">Rating:</label>
+        <select id="select-rating">
+          <option value="">None</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="title">title:</label>
+        <input value="" type="text" id="title" />
+      </div>
+      <div class="filter-group">
+        <label for="select-orderby">order by:</label>
+        <select id="select-orderby">
+          <option value="">none</option>
+          <option value="ascending">ascending</option>
+          <option value="descending">descending</option>
+        </select>
+      </div>
+    </form>
+    <h1>Products</h1>
+    <div id="products-list"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
